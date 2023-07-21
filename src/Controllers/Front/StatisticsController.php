@@ -20,7 +20,7 @@ class StatisticsController extends Controller
                 if($url['host']==$statisticsHost->host){
                     $input['url'] = '/'.basename($input['url']);
                     $input['host_id'] =$statisticsHost->id;
-                    $info = Statistics::where('ipv4',$input['ipv4'])->where('url',$input['url'])->first();
+                    $info = Statistics::where('host_id',$statisticsHost->id)->where('ipv4',$input['ipv4'])->where('url',$input['url'])->first();
                     if(!empty($info) && $info->created_at->isToday()){
                         $info->increment('view');
                     }else{
