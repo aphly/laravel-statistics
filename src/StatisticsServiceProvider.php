@@ -28,6 +28,7 @@ class StatisticsServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/config/statistics.php' => config_path('statistics.php'),
+            __DIR__.'/config/ipv4.sql' => storage_path('app/private/ipv4.sql'),
             __DIR__.'/public' => public_path('static/statistics')
         ]);
         //$this->loadMigrationsFrom(__DIR__.'/migrations');

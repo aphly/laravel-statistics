@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('host_id')->index();
             $table->char('ipv4',15)->index();
             $table->char('ipv6',39)->nullable();
+            $table->char('country_iso',2)->index();
             $table->string('url',255);
             $table->string('referrer',255)->nullable();
             $table->string('keyword',64)->nullable();
