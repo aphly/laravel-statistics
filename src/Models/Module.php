@@ -18,7 +18,7 @@ class Module extends Module_base
             DB::unprepared(file_get_contents($path));
         }
         $manager = Manager::where('username','admin')->firstOrError();
-        $menu = Menu::create(['name' => '统计管理','route' =>'','pid'=>0,'uuid'=>$manager->uuid,'type'=>1,'module_id'=>$module_id,'sort'=>10]);
+        $menu = Menu::create(['name' => '统计','route' =>'','pid'=>0,'uuid'=>$manager->uuid,'type'=>1,'module_id'=>$module_id,'sort'=>10]);
         if($menu->id){
             $data=[];
             $data[] =['name' => '站点管理','route' =>'statistics_admin/host/index','pid'=>$menu->id,'uuid'=>$manager->uuid,'type'=>2,'module_id'=>$module_id,'sort'=>0];
