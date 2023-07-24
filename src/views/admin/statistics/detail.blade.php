@@ -7,6 +7,7 @@
         <div>
             <ul class="statistics">
                 <li><span>Ipv4</span><span>{{$res['info']->ipv4}}</span></li>
+                <li><span>Country</span><span>{{$res['info']->country_iso}}</span></li>
                 <li><span>Date</span><span>{{$res['info']->created_at}}</span></li>
                 <li><span>Ipv6</span><span>{{$res['info']->ipv6}}</span></li>
                 <li><span>Url</span><span>{{$res['info']->url}}</span></li>

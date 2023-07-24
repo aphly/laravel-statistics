@@ -2,8 +2,8 @@
     <h5 class="nav-title">{!! $res['breadcrumb'] !!}</h5>
 </div>
 <style>
-    .table_scroll .table_header li:nth-child(3),.table_scroll .table_tbody li:nth-child(3){flex: 0 0 300px;}
-    .table_scroll .table_header li:nth-child(5),.table_scroll .table_tbody li:nth-child(5){flex: 0 0 200px;}
+    .table_scroll .table_header li:nth-child(4),.table_scroll .table_tbody li:nth-child(4){flex: 0 0 300px;}
+    .table_scroll .table_header li:nth-child(6),.table_scroll .table_tbody li:nth-child(6){flex: 0 0 200px;}
 </style>
 <div class="imain">
     <div class="itop ">
@@ -22,6 +22,7 @@
                 <ul class="table_header">
                     <li >ID</li>
                     <li >IP</li>
+                    <li >country</li>
                     <li >url</li>
                     <li >查看次数</li>
                     <li >日期</li>
@@ -32,6 +33,9 @@
                     <ul class="table_tbody @if($v['viewed']==1) viewed @endif">
                         <li><input type="checkbox" class="delete_box" name="delete[]" value="{{$v['id']}}">{{$v['id']}}</li>
                         <li class="wenzi">{{$v['ipv4']}}</li>
+                        <li>
+                            {{$v['country_iso']}}
+                        </li>
                         <li>
                             {{$v['url']}}
                         </li>

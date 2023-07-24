@@ -11,7 +11,7 @@ class Statistics extends Model
     protected $table = 'statistics';
     //public $timestamps = false;
     protected $fillable = [
-        'ipv4','url','referrer','keyword','language','platform','userAgent','webdriver','ipv6','view','host_id'
+        'ipv4','url','referrer','keyword','language','platform','userAgent','webdriver','ipv6','view','host_id','country_iso'
     ];
 
 }
