@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('host_id')->index();
+            $table->unsignedBigInteger('site_id')->index();
             $table->char('ipv4',15)->index();
             $table->char('ipv6',39)->nullable();
             $table->char('country_iso',2)->nullable()->index();

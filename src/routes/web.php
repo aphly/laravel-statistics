@@ -25,7 +25,7 @@ Route::middleware(['web'])->group(function () {
             Route::post('statistics/del', 'Aphly\LaravelStatistics\Controllers\Admin\StatisticsController@del');
 
             $route_arr = [
-                ['host','\StatisticsHostController']
+                ['site','\StatisticsSiteController']
             ];
 
             foreach ($route_arr as $val){

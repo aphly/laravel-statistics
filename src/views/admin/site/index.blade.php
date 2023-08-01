@@ -6,18 +6,18 @@
 </style>
 <div class="imain">
     <div class="itop ">
-        <form method="get" action="/statistics_admin/host/index" class="select_form">
+        <form method="get" action="/statistics_admin/site/index" class="select_form">
         <div class="search_box ">
             <input type="search" name="name" placeholder="name" value="{{$res['search']['name']}}">
             <button class="" type="submit">搜索</button>
         </div>
         </form>
         <div class="">
-            <a class="badge badge-primary ajax_get show_all0_btn" data-href="/statistics_admin/host/form">添加</a>
+            <a class="badge badge-primary ajax_get show_all0_btn" data-href="/statistics_admin/site/form">添加</a>
         </div>
     </div>
 
-    <form method="post"  @if($res['search']['string']) action="/statistics_admin/host/del?{{$res['search']['string']}}" @else action="/statistics_admin/host/del" @endif  class="del_form">
+    <form method="post"  @if($res['search']['string']) action="/statistics_admin/site/del?{{$res['search']['string']}}" @else action="/statistics_admin/site/del" @endif  class="del_form">
     @csrf
         <div class="table_scroll">
             <div class="table">
@@ -44,8 +44,8 @@
                             @endif
                         </li>
                         <li>
-                            <a class="badge badge-info ajax_get" data-href="/statistics_admin/host/form?id={{$v['id']}}">编辑</a>
-                            <a class="badge badge-info ajax_get" data-href="/statistics_admin/statistics/index?host_id={{$v['id']}}">统计</a>
+                            <a class="badge badge-info ajax_get" data-href="/statistics_admin/site/form?id={{$v['id']}}">编辑</a>
+                            <a class="badge badge-info ajax_get" data-href="/statistics_admin/statistics/index?site_id={{$v['id']}}">统计</a>
                         </li>
                     </ul>
                     @endforeach

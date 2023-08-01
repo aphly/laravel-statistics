@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('statistics_host', function (Blueprint $table) {
+        Schema::create('statistics_site', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('appid')->index();
             $table->string('host',64)->index();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('statistics_host');
+        Schema::dropIfExists('statistics_site');
     }
 };

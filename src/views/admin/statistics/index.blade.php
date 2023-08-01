@@ -9,7 +9,7 @@
     <div class="itop ">
         <form method="get" action="/statistics_admin/statistics/index" class="select_form">
         <div class="search_box ">
-            <input type="hidden" name="host_id"  value="{{$res['statisticsHost']->id}}">
+            <input type="hidden" name="site_id"  value="{{$res['statisticsSite']->id}}">
             <input type="search" name="ip" placeholder="IP" value="{{$res['search']['ip']}}">
             <button class="" type="submit">搜索</button>
         </div>
@@ -46,7 +46,7 @@
                             {{$v->created_at}}
                         </li>
                         <li>
-                            <a class="badge badge-info ajax_get" data-href="/statistics_admin/statistics/detail?id={{$v['id']}}&host_id={{$res['statisticsHost']->id}}">查看</a>
+                            <a class="badge badge-info ajax_get" data-href="/statistics_admin/statistics/detail?id={{$v['id']}}&site_id={{$res['statisticsSite']->id}}">查看</a>
                         </li>
                     </ul>
                     @endforeach

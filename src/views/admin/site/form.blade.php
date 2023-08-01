@@ -3,7 +3,7 @@
     <h5 class="nav-title">{!! $res['breadcrumb'] !!}</h5>
 </div>
 <div class="imain">
-    <form method="post" @if($res['info']->id) action="/statistics_admin/host/save?id={{$res['info']->id}}" @else action="/statistics_admin/host/save" @endif class="save_form">
+    <form method="post" @if($res['info']->id) action="/statistics_admin/site/save?id={{$res['info']->id}}" @else action="/statistics_admin/site/save" @endif class="save_form">
         @csrf
         <div class="">
             <div class="form-group">
