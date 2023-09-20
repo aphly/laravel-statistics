@@ -46,7 +46,7 @@
                             {{$v->created_at}}
                         </li>
                         <li>
-                            <a class="badge badge-info ajax_get" data-href="/statistics_admin/statistics/detail?id={{$v['id']}}&site_id={{$res['statisticsSite']->id}}">查看</a>
+                            <a class="badge badge-info ajax_html" data-href="/statistics_admin/statistics/detail?id={{$v['id']}}&site_id={{$res['statisticsSite']->id}}">查看</a>
                         </li>
                     </ul>
                     @endforeach
